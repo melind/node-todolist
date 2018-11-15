@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>todolist</title>
+  </head>
+  <body>
+    <h1>Liste de choses à faire</h1>
+
+    <ul>
+      <% todo.forEach(function(todolist, index) { %>
+        <li><a href="/todolist/supprimer/<%= index %>">x</a> <%= todolist %></li>
+    <%  }); %>
+
+    </ul>
+  </body>
+
+<form action="/todolist/ajouter/" method="post">
+<p>Que dois-je faire ? <input type="text" name="newtodolist" id="newtodolist" autofocus/><input type="submit" value="valider"/></p>
+</form>
+</html>
